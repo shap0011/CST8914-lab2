@@ -1,45 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Question 3- CSS & HTML</title>
+    <!---
 
-<head>
-  <title>Question 3- CSS & HTML</title>
-  <style>
-    button {
-      background-color: #c6e6c7;
-      border: none;
-      color: #000000;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
+  Question 3- CSS & HTML
+  The content you have includes a button with improper semantics. Therefore, it is not recognized by screen readers. In addition, the background & text color are hard to see for persons with low vision.
+  Tool to practice: Use Colour Contrast Analyser (CCA) to address the color contrast issue. Select a different color combination that pass the accessibility standards “WCAG 2.1 1.4.3 Contrast AA contrast ratio.” Tutorial: How to use Color Contrast Analyser (video, 2m 33s) 
 
-    body {
-      padding: 20px;
-      background-color: #2f2f2f;
-    }
 
-    h1, h2, p {
-      color: black;
-    }
-  </style>
-</head>
+  Color Contrast Standards:
 
-<body>
-  
-  <h1>HTML made Easy</h1>
+  Standard Text: 4.5:1
+  Large Text: 3:1
+  Incidental Text: Excluded From This requirement
+  Logotypes: Excluded From This requirement
+  Black Text on White Background (or close to it): No need to perform this test
 
-  <p>What causes errors in HTML?</p>
+  To start, open a webpage that contains text elements, then open the CCA tool
 
-  <button>Submit answers</button>
+  CCA download from https://www.tpgi.com/color-contrast-checker/
+  -->
 
-</body>
+    <!--
+  Contrast ratio  1.6:1 - The Color Contrast Ratio does not meet, the <h1> and <p> elements test visibility fails 
+    for <p> -> 4.5:1
+    for <h1> -> 3:1
+  -->
 
+    <style>
+      button {
+        background-color: #4c8050;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      body {
+        padding: 20px;
+        background-color: #2f2f2f;
+      }
+
+      h1,
+      h2,
+      p {
+        color: #e4b7c4;
+      }
+
+      button:focus-visible { 
+        outline: 3px solid orange; 
+        outline-offset: 2px; 
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>HTML made Easy</h1>
+
+    <p>What causes errors in HTML?</p>
+
+    <button type="button">Submit answers</button>
+  </body>
 </html>
-
-
-
-
